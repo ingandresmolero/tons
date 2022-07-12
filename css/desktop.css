@@ -1,0 +1,63 @@
+.burgerList__img{
+	display: none;
+}
+
+.header__content{
+	padding: 2rem;
+}
+
+.header__menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu__item{
+	font-size: 2rem;
+	padding-right: 1rem;
+}
+
+.menu__item:last-child{
+	padding-right: 0;
+}
+
+.table td,.table th{
+	border: none;
+}
+
+/* NAVBAR ANIMATION. BEGINS */
+.menu__item--link{
+	position: relative;
+}
+
+.menu__item--link::after{
+	content: '';
+	position: absolute;
+	display: block;
+	height: 0.6rem;
+	width: 0;
+	background-color: #bf2477;
+	bottom: -1.6rem;
+	transition: all ease-in-out 250ms;
+}
+
+.menu__item--link:hover::after{
+	width: 100%;
+}
+
+.menu__item--link:hover{
+	color: #bf2477;
+	transition: all ease-in-out 250ms;
+}
+
+/* NAVBAR ANIMATION. ENDS */
+
+
+.footer__copyright{
+	font-size: 2rem;
+}
+
+.footer__copyright{
+	display: flex;
+	padding-left: 1rem;
+}
