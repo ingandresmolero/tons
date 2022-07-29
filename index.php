@@ -49,11 +49,12 @@
         <div class="container">
             <div class="main__content">
 
-                <button id="mostrarRegistro">Crear un nuevo registro</button>
+                <button href="" id="mostrarRegistro">Filtrar Registro<i class="bi bi-search"></i></button>
+                <!-- <button id="mostrarRegistro">Crear un nuevo registro</button> -->
 
                 <div class="main__formContainer hide" id="form"> 
                     <div class="formTitle">
-                        <h2>REGISTRO</h2>
+                        <h2>Filtrar</h2>
                         <a href="" class="closeWindow"><i class="icon bi bi-x-lg"></i></a>
                     </div>
                     
@@ -76,12 +77,11 @@
                         <label for="situacion" class="labelSituacion"><span>Situación</span></label>
                         <input type="text" name="" id="situacion" class="" autofocus required value="">
                         
-                        <input class="btn" type="button" value="REGISTRAR">
+                        <input class="btn" type="button" value="FILTRAR">
                     </form>
                 </div>
                 
                 <table class="table" id="table">
-
                     <thead>
                         <tr>
                             <th>Descripción</th>
