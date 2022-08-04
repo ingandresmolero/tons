@@ -19,14 +19,15 @@
                     </figure>
     
                     <nav class="nav">
+                        <form action="" method="post">
                         <ul class="header__menu">
                             <li class="menu__item"><a href="" class="menu__item--link">Inicio</a></li>
-                            <li class="menu__item"><a href="" class="menu__item--link"><input type="submit" class="menu__item--link button__submit" value="Linea Marron"></a></li>
-                            <li class="menu__item"><a href="" class="menu__item--link"><input type="submit" class="menu__item--link button__submit" value="Linea Blanca"></a></li>
-                            <!-- <li class="menu__item"><a href="" class="menu__item--link">Mobile</a></li>
-                            <li class="menu__item"><a href="" class="menu__item--link">IT</a></li>
-                            <li class="menu__item"><a href="" class="menu__item--link">Legend</a></li> -->
+                            <li class="menu__item"><a href="" class="menu__item--link">
+                            <input type="submit" name="LMarron" class="menu__item--link button__submit" value="Linea Marron"></a></li>
+                            <li class="menu__item"><a href="" class="menu__item--link"><input type="submit" class="menu__item--link button__submit" name="LBlanca"value="Linea Blanca"></a></li>
+                            <li class="menu__item"><a href="" class="menu__item--link"><input type="submit" class="menu__item--link button__submit" name="mostrar"value="Todos"></a></li>
                         </ul>
+                        </form>
                     </nav>
     
                     <a onclick="showMenu()"  href="#" class="burgerList__img">
@@ -36,11 +37,14 @@
                     <a onclick="showMenu()" href="#" class="cancel__img">
                         <i class="icon bi bi-x-lg"></i>
                     </a>
-
+                
                 <div class="header__inputs">
-                    <input type="text" class="input__text header__input--text font" placeholder="Buscar Registro">
-                    <input type="button" class="button header__input--button font" value="Buscar 🔎">
+                <form action="" method="post">
+                    <input type="text" class="input__text header__input--text font" name="ODS" placeholder="Buscar ODS">
+                    <input type="submit" name="enviar" class="button header__input--button font" value="Buscar 🔎">
+                    </form>
                 </div>
+                
                 
             </div>
         </div>
@@ -50,7 +54,7 @@
         <div class="container">
             <div class="main__content">
 
-                <button href="" id="mostrarRegistro">Filtrar Registro<i class="bi bi-search"></i></button>
+                <!-- <button href="" id="mostrarRegistro">Filtrar Registro<i class="bi bi-search"></i></button> -->
                 <!-- <button id="mostrarRegistro">Crear un nuevo registro</button> -->
 
                 <div class="main__formContainer hide" id="form"> 
@@ -83,38 +87,25 @@
                 </div>
                 
                 <table class="table" id="table">
+
                     <thead>
                         <tr>
-                            <th>Descripción</th>
-                            <th>Nro Orden</th>
-                            <th>Tipo de Equipo</th>
-                            <th>Fecha de Recepción</th>
-                            <th>Línea de Equipo</th>
-                            <th>Situación</th>
+                            <th>ODS</th>
+                            <th>TECNICO</th>
+                            <th>EQUIPO</th>
+                            <th>STATUS</th>
+                            <th>FECHA INGRESO</th>
+                            <th>LINEA</th>
+                            <th>REGION</th>
                         </tr>
                     </thead>
 
-                    <tbody>
-                          <tr>
-                                <td data-label="Descripción">Andres Molero</td>
-                                <td data-label="Nro Orden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, sapiente!</td>
-                                <td data-label="Tipo de Equipo">Lorem ipsum dolor sit amet.</td>
-                                <td data-label="Fecha de Recepción">Lorem, ipsum.</td>
-                                <td data-label="Línea de Equipo">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                                <td data-label="Situación">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                          </tr>
-               
-                          <tr>
-                                <td data-label="Descripción">Andres Molero</td>
-                                <td data-label="Nro Orden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, sapiente!</td>
-                                <td data-label="Tipo de Equipo">Lorem ipsum dolor sit amet.</td>
-                                <td data-label="Fecha de Recepción">Lorem, ipsum.</td>
-                                <td data-label="Línea de Equipo">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                                <td data-label="Situación">Lorem ipsum, dolor sit amet consectetur adipisicing.</td>
-                          </tr>
-                 
-                    </tbody>
-
+                    <?php
+include("php/Querys/SelectDatos.php");
+include("php/Querys/BuscarServicio.php");
+include("php/Querys/FiltradoServicio.php");
+include("php/Querys/SeleccionTecnico.php");
+?>
                   </table>
 
                   <div class="main__pagination">
