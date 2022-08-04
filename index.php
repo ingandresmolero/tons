@@ -14,32 +14,33 @@
     <header class="header">
         <div class="container">
             <div class="header__content">
-                
-                <figure class="logo">
-                    <a href="#"><img src="./css/img/logonav.png" class="logo__img" alt="logo"></a>
-                </figure>
-
-                <nav class="nav">
-                    <ul class="header__menu">
-                        <li class="menu__item"><a href="" class="menu__item--link">Inicio</a></li>
-                        <li class="menu__item"><a href="" class="menu__item--link">Linea Marron</a></li>
-                        <li class="menu__item"><a href="" class="menu__item--link">Linea Blanca</a></li>
-                        <li class="menu__item"><a href="" class="menu__item--link">Mobile</a></li>
-                        <li class="menu__item"><a href="" class="menu__item--link">IT</a></li>
-                        <li class="menu__item"><a href="" class="menu__item--link">Legend</a></li>
-                    </ul>
-                </nav>
-
-                
+                    <figure class="logo">
+                        <a href="#"><img src="./css/img/logonav.png" class="logo__img" alt="logo"></a>
+                    </figure>
+    
+                    <nav class="nav">
+                        <ul class="header__menu">
+                            <li class="menu__item"><a href="" class="menu__item--link">Inicio</a></li>
+                            <li class="menu__item"><a href="" class="menu__item--link"><input type="submit" class="menu__item--link button__submit" value="Linea Marron"></a></li>
+                            <li class="menu__item"><a href="" class="menu__item--link"><input type="submit" class="menu__item--link button__submit" value="Linea Blanca"></a></li>
+                            <!-- <li class="menu__item"><a href="" class="menu__item--link">Mobile</a></li>
+                            <li class="menu__item"><a href="" class="menu__item--link">IT</a></li>
+                            <li class="menu__item"><a href="" class="menu__item--link">Legend</a></li> -->
+                        </ul>
+                    </nav>
+    
                     <a onclick="showMenu()"  href="#" class="burgerList__img">
                         <img src="./css/img/icon-hamburger.svg"  alt="mostrar menu para moviles">
-                        <!-- <img src="" class="cancel__img" alt="cancel"> -->
                     </a>
                 
-
                     <a onclick="showMenu()" href="#" class="cancel__img">
                         <i class="icon bi bi-x-lg"></i>
                     </a>
+
+                <div class="header__inputs">
+                    <input type="text" class="input__text header__input--text font" placeholder="Buscar Registro">
+                    <input type="button" class="button header__input--button font" value="Buscar 🔎">
+                </div>
                 
             </div>
         </div>
@@ -115,6 +116,11 @@
                     </tbody>
 
                   </table>
+
+                  <div class="main__pagination">
+                    <div class="button input__button font button__pagination">Siguiente<i class="bi bi-arrow-right"></i></div>
+                    <div class="button input__button font button__pagination"><i class="bi bi-arrow-left"></i>Anterior</div>
+                  </div>
             </div>
         </div>
     </main>
