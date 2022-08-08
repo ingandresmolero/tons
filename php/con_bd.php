@@ -7,7 +7,7 @@ $connectionInfo = array( "Database"=>"innovaDB", "UID"=>"saint", "PWD"=>"nvd.392
 $conn = sqlsrv_connect( $serverName, $connectionInfo);
 $row= array ();
 if($conn){
-  
+
 }else{
     echo "  sigamos intentando <br /> ERROR: <br /> <br /> ";
     die( print_r( sqlsrv_errors(), true));

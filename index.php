@@ -110,9 +110,9 @@
                     <?php
                     include("php/Querys/SelectDatos.php");
                     include("php/Querys/BuscarServicio.php");
-                    include("php/Querys/FiltradoMarron.php");
                     include("php/Querys/FiltradoBlanca.php");
-                    include("php/Querys/SeleccionTecnico.php");
+                    include("php/Querys/FiltradoMarron.php")
+
                     ?>
                 </table>
 

@@ -2,7 +2,7 @@
 include("php/con_bd.php");
 
 
-
+if(isset($_POST['mostrar'])){
 
 $Select="SELECT A.[CodMeca], A.[Descrip], B.[NROORDENS],B.[TIPOEQUIPO],B.[FECHARECEPCION_SQL],B.[LINEAEQUIPO],B.[SITUACION], A.[REGION]  FROM [innovaDB].[dbo].[SAMECA] A 
 INNER JOIN [innovaDB].[dbo].[T_H_ORDENESSERVICIO] B 
@@ -34,5 +34,5 @@ echo '
 
     $i++;
 }
-
+}
 ?>
