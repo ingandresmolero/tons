@@ -1,12 +1,16 @@
 <?php
-include("php/con_bd.php");
-include("php/configurador.php");
+include("../php/con_bd.php");
 
 
+    $Select = "SELECT A.[CodMeca], A.[Descrip], B.[NROORDENS],B.[TIPOEQUIPO],B.[FECHARECEPCION_SQL],B.[LINEAEQUIPO],B.[SITUACION], A.[REGION],B.[CODCLIE]
+        FROM [innovaDB].[dbo].[SAMECA] A 
+        INNER JOIN [innovaDB].[dbo].[T_H_ORDENESSERVICIO] B
+        ON A.[CodMeca]=B.[CODMECA] 
+        
+               
+   
 
-    $Select = "SELECT A.[CodMeca], A.[Descrip], B.[NROORDENS],B.[TIPOEQUIPO],B.[FECHARECEPCION_SQL],B.[LINEAEQUIPO],B.[SITUACION], A.[REGION]  FROM [innovaDB].[dbo].[SAMECA] A 
-INNER JOIN [innovaDB].[dbo].[T_H_ORDENESSERVICIO] B 
-    ON A.[CodMeca]=B.[CODMECA]  WHERE FECHARECEPCION_SQL> '2022-6-1' AND SITUACION='EN REVISION' and REGION='MARACAIBO' ORDER BY FECHARECEPCION_SQL DESC";
+         WHERE SITUACION='EN REVISION' AND B.[CODCLIE]='J-31765957-0'  ORDER BY FECHARECEPCION_SQL DESC";
 
     $Mostrar = sqlsrv_query($conn, $Select);
     $i = 0;
@@ -18,6 +22,7 @@ INNER JOIN [innovaDB].[dbo].[T_H_ORDENESSERVICIO] B
         $Linea = $row['LINEAEQUIPO'];
         $Situacion = $row['SITUACION'];
         $Region = $row['REGION'];
+        $Cliente=$row['CODCLIE'];
 
         echo '
 <tr align="center">
@@ -28,6 +33,7 @@ INNER JOIN [innovaDB].[dbo].[T_H_ORDENESSERVICIO] B
                 <td>' .  $Fecha  . '</td>
                 <td>' .  $Linea  . '</td>
                 <td>' .  $Region  . '</td>
+                <td>' .  $Cliente  . '</td>
             </tr>
 ';
 

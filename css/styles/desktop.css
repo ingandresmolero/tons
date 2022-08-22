@@ -1,0 +1,153 @@
+.burgerList__img {
+  display: none;
+}
+
+.header__content {
+  padding: 2rem;
+}
+
+.input__text {
+  margin: 0 0.5rem;
+}
+
+.input__button {
+  height: 5rem;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.nav {
+  justify-self: end;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.menu__item:last-child {
+  padding-right: 0;
+}
+
+.table td,
+.table th {
+  border: none;
+}
+
+/* NAVBAR ANIMATION. BEGINS */
+.menu__item--link {
+  position: relative;
+}
+
+.menu__item--link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0.6rem;
+  width: 0;
+  background-color: #bf2477;
+  bottom: -1.6rem;
+  transition: all ease-in-out 250ms;
+}
+
+.menu__item--link:hover::after {
+  width: 100%;
+}
+
+.menu__item--link:hover {
+  color: #bf2477;
+  transition: all ease-in-out 250ms;
+}
+
+.main__formContainer {
+  max-width: 750px;
+}
+
+.main__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  place-items: center;
+  place-content: center;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.labelDescripcion {
+  grid-area: 1/1/2/1;
+}
+
+#descripcion {
+  grid-area: 2/1/3/1;
+}
+
+.labelNroOrden {
+  grid-area: 3/1/4/1;
+}
+
+#nroOrden {
+  grid-area: 4/1/5/1;
+}
+
+.labelTipoEquipo {
+  grid-area: 5/1/6/1;
+}
+
+#tipoEquipo {
+  grid-area: 6/1/7/1;
+}
+
+.labelFechaRecepcion {
+  grid-area: 1/2/2/2;
+}
+
+#fechaRecepcion {
+  grid-area: 2/2/3/2;
+}
+
+.labelLineaEquipo {
+  grid-area: 3/2/4/2;
+}
+
+#lineaEquipo {
+  grid-area: 4/2/5/2;
+}
+
+.labelSituacion {
+  grid-area: 5/2/6/2;
+}
+
+#situacion {
+  grid-area: 6/2/7/2;
+}
+
+.btn {
+  grid-area: 7/1/8/3;
+}
+
+/* NAVBAR ANIMATION. ENDS */
+
+.footer__copyright {
+  font-size: 2rem;
+}
+
+.footer__copyright {
+  display: flex;
+  padding-left: 1rem;
+}
+
+.header__content {
+  padding: 2rem 3rem;
+}

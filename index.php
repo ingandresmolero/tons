@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="60" > -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilos.css">
-    <link rel="stylesheet" href="./css/desktop.css" media="screen and (min-width:990px)">
+    <link rel="stylesheet" href="./css/styles/estilos.css">
+    <link rel="stylesheet" href="./css/styles/tablet.css" media="screen and (min-width:660px)">
+    <link rel="stylesheet" href="./css/styles/desktop.css" media="screen and (min-width:990px)">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>ON SERVICE - SYSTEM</title>
 </head>
@@ -15,7 +17,7 @@
 
     <header class="header">
         <div class="container">
-            <div class="header__content">
+            <div class="header__content header__content--flex header__content--grid">
                 <figure class="logo">
                     <a href="#"><img src="./css/img/logonav.png" class="logo__img" alt="logo"></a>
                 </figure>
@@ -23,16 +25,13 @@
                 <nav class="nav">
                     <form action="" method="post">
                         <ul class="header__menu">
-                            <li class="menu__item">
-                                <a href="" class="menu__item--link">Inicio</a></li>
-                            <li class="menu__item">
-                                <a href="" class="menu__item--link">
-                                    <input type="submit" name="LMarron" class="menu__item--link button__submit" value="Linea Marron"></a></li>
-                            <li class="menu__item"><a href="" class="menu__item--link">
-                                <input type="submit" class="menu__item--link button__submit" name="LBlanca" value="Linea Blanca"></a></li>
-                            <li class="menu__item"><a href="" class="menu__item--link">
-                                <input type="submit" class="menu__item--link button__submit" name="mostrar" value="Todos"></a></li>
-                            <li class="menu__item"><a href="configuracion.php" class="menu__item--link">Configuracion</a></li>
+                            <li class="menu__item"><a href="portal.php" class="menu__item--link">Lineas</a></li>
+                            
+                            <li class="menu__item"><a href="views/daka.php" class="menu__item--link">DAKA</a></li>
+                            <li class="menu__item"><a href="views/multimaxmcbo.php" class="menu__item--link">Multimax Mcbo</a></li>
+                            <li class="menu__item"><a href="views/multimaxlimpia.php" class="menu__item--link">Multimax Limpia</a></li>
+                            <!-- <li class="menu__item"><a href="" class="menu__item--link"><input type="submit" class="menu__item--link button__submit" name="filtrado" value="B.Filtrada"></a></li>
+                            <li class="menu__item"><a href="configuracion.php" class="menu__item--link">Config</a></li> -->
                         </ul>
                     </form>
                 </nav>
@@ -46,8 +45,8 @@
                 </a>
 
                 <div class="header__inputs">
-                    <form action="" method="post">
-                        <input type="text" class="input__text header__input--text font" name="ODS" placeholder="Buscar ODS">
+                    <form action="busqueda.php" method="post" class="search search--flex">
+                        <input type="text" class="input--text header__input--text font" name="ODS" placeholder="Buscar ODS">
                         <input type="submit" name="enviar" class="button header__input--button font" value="Buscar 🔎">
                     </form>
                 </div>
@@ -60,9 +59,6 @@
     <main>
         <div class="container">
             <div class="main__content">
-
-                <!-- <button href="" id="mostrarRegistro">Filtrar Registro<i class="bi bi-search"></i></button> -->
-                <!-- <button id="mostrarRegistro">Crear un nuevo registro</button> -->
 
                 <div class="main__formContainer hide" id="form">
                     <div class="formTitle">
@@ -108,29 +104,19 @@
                     </thead>
 
                     <?php
-                    include("php/Querys/SelectDatos.php");
-                    include("php/Querys/BuscarServicio.php");
-                    include("php/Querys/FiltradoBlanca.php");
-                    include("php/Querys/FiltradoMarron.php")
-
+                    include("./php/Querys/SelectDatos.php");
+                  
                     ?>
                 </table>
+
 
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__copyright">
-                    <p class="">&copy; Copyright 2021. Todos los derechos reservados.</p>
-                    <p class="">Diseñado por <span> ON SERVICE C.A</span></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <?php
+    include("./templates/footer.php")
+    ?>
 
     <script src="./js/index.js"></script>
 </body>
