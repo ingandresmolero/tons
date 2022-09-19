@@ -45,6 +45,12 @@
                 </a>
 
                 <div class="header__inputs">
+                    <!-- <div class="contador">
+                        <h1>Casos Pendientes: </h1>
+                        <?php
+                            include("./php/contadorgeneral.php")
+                        ?>
+                    </div> -->
                     <form action="busqueda.php" method="post" class="search search--flex">
                         <input type="text" class="input--text header__input--text font" name="ODS" placeholder="Buscar ODS">
                         <input type="submit" name="enviar" class="button header__input--button font" value="Buscar 🔎">
@@ -94,6 +100,7 @@
                     <thead>
                         <tr>
                             <th>ODS</th>
+                            <th>CLIENTE</th>
                             <th>TECNICO</th>
                             <th>EQUIPO</th>
                             <th>STATUS</th>
